@@ -1,0 +1,17 @@
+{
+  "name": "final_task_stream",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "go": "node script.js 'https://www.youtube.com/watch?v=BF04dz7r9sk,https://www.youtube.com/watch?v=6_xkl-F0KBg&quot,https://www.youtube.com/watch?v=2dezc8WCWIk' /Users/evgenijgravdin/Desktop/Final_task_stream/video/video_"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "fluent-ffmpeg": "^2.1.2",
+    "ytdl-core": "^4.11.0"
+  }
+}
