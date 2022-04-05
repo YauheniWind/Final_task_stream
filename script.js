@@ -13,13 +13,11 @@ const musicUrl = process.argv[2].split(',');
         const readableVideoStream = ytdl(link)
         const outputPath = path.resolve(`/Users/evgenijgravdin/Desktop/Final_task_stream/music/music_` + `${Math.random()}` + `.mp3`)
 
+        ytdl(link).pipe(fs.createWriteStream(`${process.argv[3]}_${Math.random()}.mp4`))
+
         ffmpeg(readableVideoStream)
             .withNoVideo()
             .toFormat('mp3')
             .saveToFile(outputPath)
     }
 })()
-
-musicUrl.forEach(inputImagePath => {
-    ytdl(inputImagePath).pipe(fs.createWriteStream(`${process.argv[3]}_${Math.random()}.mp4`))
-})
